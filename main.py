@@ -20,7 +20,7 @@ class MainPage(webapp2.RequestHandler):
 
         if user:
             self.response.headers['Content-Type'] = 'text/html; charset=utf-8'
-            self.response.write('Dude, ' + user.nickname())
+            self.response.write('Hello, ' + user.nickname())
         else:
             self.redirect(users.create_login_url(self.request.uri))
 # ========== ========== ==========
